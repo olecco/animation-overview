@@ -5,4 +5,6 @@
     <string name="transitions_framework">Transitions Framework</string>
     <string name="shared_elements_transitions">Shared Elements Transitions</string>
     <string name="drawable_animation">Drawable Animation</string>
+
+    <string name="play">Play</string>
 </resources>
