@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Animation Overview</string>
+    <string name="view_animation">View Animation</string>
+    <string name="property_animation">Property Animation</string>
+    <string name="transitions_framework">Transitions Framework</string>
+    <string name="shared_elements_transitions">Shared Elements Transitions</string>
+    <string name="drawable_animation">Drawable Animation</string>
 </resources>
