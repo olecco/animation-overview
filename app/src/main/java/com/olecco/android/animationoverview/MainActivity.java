@@ -1,35 +1,51 @@
 package com.olecco.android.animationoverview;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.view.View;
+import android.view.MenuItem;
 
-public class MainActivity extends Activity {
+import com.olecco.android.animationoverview.screens.ViewAnimationFragment;
+
+public class MainActivity extends Activity implements MainMenuFragment.MainMenuListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (savedInstanceState == null) {
+            showFragment(new MainMenuFragment(), false);
+        }
     }
 
-    public void onViewAnimationClick(View view) {
-
+    private void showFragment(Fragment fragment, boolean toBackStack) {
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.fragment_container, fragment);
+        if (toBackStack) {
+            ft.addToBackStack(null);
+        }
+        ft.commit();
     }
 
-    public void onPropertyAnimationClick(View view) {
-
+    private Fragment createMenuItemFragment(int itemId) {
+        switch (itemId) {
+            case R.id.view_animation_item_id:
+                return new ViewAnimationFragment();
+            case R.id.property_animation_item_id:
+            case R.id.transition_framework_item_id:
+            case R.id.shared_element_item_id:
+            case R.id.drawable_animation_item_id:
+            default:
+                return null;
+        }
     }
 
-    public void onTransitionsFrameworkClick(View view) {
-
+    @Override
+    public void onMenuItemClicked(int itemId) {
+        Fragment fragment = createMenuItemFragment(itemId);
+        if (fragment != null) {
+            showFragment(fragment, true);
+        }
     }
-
-    public void onSharedElementsClick(View view) {
-
-    }
-
-    public void onDrawableAnimationClick(View view) {
-
-    }
-
 }

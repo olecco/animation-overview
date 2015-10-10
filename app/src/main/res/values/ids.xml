@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="view_animation_item_id" type="id"/>
+    <item name="property_animation_item_id" type="id"/>
+    <item name="transition_framework_item_id" type="id"/>
+    <item name="shared_element_item_id" type="id"/>
+    <item name="drawable_animation_item_id" type="id"/>
+</resources>
