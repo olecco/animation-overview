@@ -4,28 +4,58 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.transition.Fade;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.MenuItem;
 
 import com.olecco.android.animationoverview.screens.ViewAnimationFragment;
 
 public class MainActivity extends Activity implements MainMenuFragment.MainMenuListener {
 
+    private Fragment mainMenuFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (savedInstanceState == null) {
-            showFragment(new MainMenuFragment(), false);
+
+        mainMenuFragment = getFragmentManager().findFragmentByTag(MainMenuFragment.TAG);
+        if (mainMenuFragment == null) {
+            mainMenuFragment = new MainMenuFragment();
+            showFragment(mainMenuFragment, false, MainMenuFragment.TAG);
         }
     }
 
-    private void showFragment(Fragment fragment, boolean toBackStack) {
+    private void showFragment(Fragment fragment, boolean toBackStack, String tag) {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.fragment_container, fragment);
+        ft.replace(R.id.fragment_container, fragment, tag);
         if (toBackStack) {
             ft.addToBackStack(null);
         }
         ft.commit();
+    }
+
+    private void setupMenuFragmentTransitions() {
+        Slide slideInTransition = new Slide();
+        Slide slideOutTransition = new Slide();
+        slideInTransition.setSlideEdge(Gravity.START);
+        slideInTransition.setStartDelay(getResources().getInteger(R.integer.transition_duration));
+        slideInTransition.setDuration(getResources().getInteger(R.integer.transition_duration));
+        slideOutTransition.setSlideEdge(Gravity.START);
+        slideOutTransition.setDuration(getResources().getInteger(R.integer.transition_duration));
+        mainMenuFragment.setReenterTransition(slideInTransition);
+        mainMenuFragment.setExitTransition(slideOutTransition);
+    }
+
+    private void setupFragmentTransitions(Fragment fragment) {
+        Fade fadeInTransition = new Fade();
+        Fade fadeOutTransition = new Fade();
+        fadeInTransition.setDuration(getResources().getInteger(R.integer.transition_duration));
+        fadeInTransition.setStartDelay(getResources().getInteger(R.integer.transition_duration));
+        fadeOutTransition.setDuration(getResources().getInteger(R.integer.transition_duration));
+        fragment.setEnterTransition(fadeInTransition);
+        fragment.setReturnTransition(fadeOutTransition);
     }
 
     private Fragment createMenuItemFragment(int itemId) {
@@ -45,7 +75,9 @@ public class MainActivity extends Activity implements MainMenuFragment.MainMenuL
     public void onMenuItemClicked(int itemId) {
         Fragment fragment = createMenuItemFragment(itemId);
         if (fragment != null) {
-            showFragment(fragment, true);
+            setupMenuFragmentTransitions();
+            setupFragmentTransitions(fragment);
+            showFragment(fragment, true, null);
         }
     }
 }

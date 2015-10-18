@@ -12,6 +12,8 @@ import android.view.ViewGroup;
  */
 public class MainMenuFragment extends Fragment {
 
+    public static final String TAG = "MainMenu";
+
     public interface MainMenuListener {
         void onMenuItemClicked(int itemId);
     }
