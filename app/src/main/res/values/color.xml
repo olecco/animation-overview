@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="divider_color">#A0A0A0</color>
+
+    <color name="animated_color_from">#00000000</color>
+    <color name="animated_color_to">#7020C0</color>
 </resources>

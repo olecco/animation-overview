@@ -13,4 +13,10 @@
     <string name="scale">Scale</string>
     <string name="alpha">Alpha</string>
     <string name="animation_set">Animation Set</string>
+
+    <string name="translation_prop">Translation X/Y/Z</string>
+    <string name="rotation_prop">Rotation X/Y</string>
+    <string name="scale_prop">Scale X/Y</string>
+    <string name="color_prop">Color</string>
+    <string name="animator_set">Animator Set</string>
 </resources>

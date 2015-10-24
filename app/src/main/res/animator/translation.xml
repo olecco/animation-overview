@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:ordering="together">
+
+    <objectAnimator
+        android:duration="@integer/property_animation_duration"
+        android:propertyName="translationX"
+        android:valueFrom="0dp"
+        android:valueTo="100dp"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:duration="@integer/property_animation_duration"
+        android:propertyName="translationY"
+        android:valueFrom="0dp"
+        android:valueTo="100dp"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:duration="@integer/property_animation_duration"
+        android:propertyName="translationZ"
+        android:valueFrom="0dp"
+        android:valueTo="10dp"
+        android:valueType="floatType" />
+
+</set>

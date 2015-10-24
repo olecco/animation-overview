@@ -5,15 +5,17 @@
     android:layout_height="match_parent">
 
     <FrameLayout
+        android:id="@+id/animated_area"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/button_area" >
+        android:layout_above="@+id/button_area">
 
         <ImageView
             android:id="@+id/animated_view"
             android:layout_width="156dp"
             android:layout_height="156dp"
-            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
             android:src="@drawable/android" />
 
     </FrameLayout>
@@ -34,18 +36,18 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/translate_button"
+                android:id="@+id/translation_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/translate" />
+                android:text="@string/translation_prop" />
 
             <Button
-                android:id="@+id/rotate_button"
+                android:id="@+id/rotation_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/rotate" />
+                android:text="@string/rotation_prop" />
 
         </LinearLayout>
 
@@ -58,22 +60,22 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/scale" />
+                android:text="@string/scale_prop" />
 
             <Button
-                android:id="@+id/alpha_button"
+                android:id="@+id/color_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/alpha" />
+                android:text="@string/color_prop" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/animation_set_button"
+            android:id="@+id/animator_set_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/animation_set" />
+            android:text="@string/animator_set" />
 
     </LinearLayout>
 

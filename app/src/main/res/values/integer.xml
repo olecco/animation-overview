@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="transition_duration">400</integer>
+
+    <integer name="property_animation_duration">1500</integer>
 </resources>

@@ -9,6 +9,7 @@ import android.transition.Slide;
 import android.view.Gravity;
 import android.view.MenuItem;
 
+import com.olecco.android.animationoverview.screens.PropertyAnimationFragment;
 import com.olecco.android.animationoverview.screens.ViewAnimationFragment;
 
 public class MainActivity extends Activity implements MainMenuFragment.MainMenuListener {
@@ -63,6 +64,7 @@ public class MainActivity extends Activity implements MainMenuFragment.MainMenuL
             case R.id.view_animation_item_id:
                 return new ViewAnimationFragment();
             case R.id.property_animation_item_id:
+                return new PropertyAnimationFragment();
             case R.id.transition_framework_item_id:
             case R.id.shared_element_item_id:
             case R.id.drawable_animation_item_id:
