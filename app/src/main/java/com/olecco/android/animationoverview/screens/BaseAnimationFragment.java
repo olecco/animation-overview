@@ -51,7 +51,7 @@ public abstract class BaseAnimationFragment extends Fragment {
     protected void onPlayButtonClick() { }
 
     protected boolean hasPlayButton() {
-        return true;
+        return false;
     }
 
     protected abstract String getScreenName();

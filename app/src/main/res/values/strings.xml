@@ -7,4 +7,10 @@
     <string name="drawable_animation">Drawable Animation</string>
 
     <string name="play">Play</string>
+
+    <string name="translate">Translate</string>
+    <string name="rotate">Rotate</string>
+    <string name="scale">Scale</string>
+    <string name="alpha">Alpha</string>
+    <string name="animation_set">Animation Set</string>
 </resources>

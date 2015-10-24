@@ -3,7 +3,6 @@
     android:shareInterpolator="false">
 
     <scale
-        android:fillAfter="false"
         android:duration="1000"
         android:fromXScale="1.0"
         android:fromYScale="1.0"
@@ -15,7 +14,6 @@
 
     <set android:interpolator="@android:anim/decelerate_interpolator">
         <scale
-            android:fillBefore="false"
             android:duration="700"
             android:fromXScale="1.4"
             android:fromYScale="0.6"
