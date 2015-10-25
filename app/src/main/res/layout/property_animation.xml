@@ -63,19 +63,19 @@
                 android:text="@string/scale_prop" />
 
             <Button
-                android:id="@+id/color_button"
+                android:id="@+id/animator_set_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/color_prop" />
+                android:text="@string/animator_set" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/animator_set_button"
+            android:id="@+id/color_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/animator_set" />
+            android:text="@string/color_prop" />
 
     </LinearLayout>
 

@@ -37,11 +37,11 @@ public class PropertyAnimationFragment extends BaseAnimationFragment {
                 case R.id.scale_button:
                     onScaleClick();
                     break;
-                case R.id.color_button:
-                    onColorClick();
-                    break;
                 case R.id.animator_set_button:
                     onAnimatorSetClick();
+                    break;
+                case R.id.color_button:
+                    onColorClick();
                     break;
             }
         }
@@ -61,8 +61,8 @@ public class PropertyAnimationFragment extends BaseAnimationFragment {
         view.findViewById(R.id.translation_button).setOnClickListener(animationButtonClickListener);
         view.findViewById(R.id.rotation_button).setOnClickListener(animationButtonClickListener);
         view.findViewById(R.id.scale_button).setOnClickListener(animationButtonClickListener);
-        view.findViewById(R.id.color_button).setOnClickListener(animationButtonClickListener);
         view.findViewById(R.id.animator_set_button).setOnClickListener(animationButtonClickListener);
+        view.findViewById(R.id.color_button).setOnClickListener(animationButtonClickListener);
         return view;
     }
 
@@ -100,6 +100,21 @@ public class PropertyAnimationFragment extends BaseAnimationFragment {
         scaleAnimator.start();
     }
 
+    private void onAnimatorSetClick() {
+        // single ViewPropertyAnimator
+        animatedView.animate()
+                .translationX(0.0f)
+                .translationY(0.0f)
+                .translationZ(0.0f)
+                .rotation(0.0f)
+                .rotationX(0.0f)
+                .rotationY(0.0f)
+                .scaleX(1.0f)
+                .scaleY(1.0f)
+                .setDuration(animationDuration)
+                .setInterpolator(new AccelerateDecelerateInterpolator());
+    }
+
     private void onColorClick() {
         // example of ValueAnimator and TypeEvaluator implementation
         Integer colorFrom = getResources().getColor(R.color.animated_color_from);
@@ -117,20 +132,5 @@ public class PropertyAnimationFragment extends BaseAnimationFragment {
 
         });
         colorAnimator.start();
-    }
-
-    private void onAnimatorSetClick() {
-        // single ViewPropertyAnimator
-        animatedView.animate()
-                .translationX(0.0f)
-                .translationY(0.0f)
-                .translationZ(0.0f)
-                .rotation(0.0f)
-                .rotationX(0.0f)
-                .rotationY(0.0f)
-                .scaleX(1.0f)
-                .scaleY(1.0f)
-                .setDuration(animationDuration)
-                .setInterpolator(new AccelerateDecelerateInterpolator());
     }
 }
