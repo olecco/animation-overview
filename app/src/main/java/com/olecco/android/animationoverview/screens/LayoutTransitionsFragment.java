@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
@@ -82,6 +83,8 @@ public class LayoutTransitionsFragment extends BaseAnimationFragment {
 
             if (customAnimationsCheck.isChecked()) {
                 setupCustomAnimations();
+            } else {
+                clearCustomAnimations();
             }
         }
     }
@@ -124,6 +127,12 @@ public class LayoutTransitionsFragment extends BaseAnimationFragment {
 
         // CHANGE_DISAPPEARING
         transition.setStagger(LayoutTransition.CHANGE_DISAPPEARING, 400);
+    }
+
+    private void clearCustomAnimations() {
+        LayoutTransition transition = viewContainer.getLayoutTransition();
+        Animator animator = transition.getAnimator(LayoutTransition.CHANGE_APPEARING);
+        animator.setInterpolator(new DecelerateInterpolator());
     }
 
     @Override
