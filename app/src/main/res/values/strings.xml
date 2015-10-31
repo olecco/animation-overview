@@ -2,7 +2,7 @@
     <string name="app_name">Animation Overview</string>
     <string name="view_animation">View Animation</string>
     <string name="property_animation">Property Animation</string>
-    <string name="transitions_framework">Transitions Framework</string>
+    <string name="layout_transitions">Layout Transitions</string>
     <string name="shared_elements_transitions">Shared Elements Transitions</string>
     <string name="drawable_animation">Drawable Animation</string>
 
@@ -19,4 +19,9 @@
     <string name="scale_prop">Scale X/Y</string>
     <string name="color_prop">Color</string>
     <string name="animator_set">Animator Set</string>
+
+    <string name="add">Add view</string>
+    <string name="remove">Remove view</string>
+    <string name="set_transition">Set LayoutTransition (animateLayoutChanges=true)</string>
+    <string name="enable_changes">Enable CHANGING transition</string>
 </resources>

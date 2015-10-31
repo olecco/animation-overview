@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.transition.Fade;
 import android.transition.Slide;
 import android.view.Gravity;
-import android.view.MenuItem;
 
+import com.olecco.android.animationoverview.screens.LayoutTransitionsFragment;
 import com.olecco.android.animationoverview.screens.PropertyAnimationFragment;
 import com.olecco.android.animationoverview.screens.ViewAnimationFragment;
 
@@ -65,7 +65,8 @@ public class MainActivity extends Activity implements MainMenuFragment.MainMenuL
                 return new ViewAnimationFragment();
             case R.id.property_animation_item_id:
                 return new PropertyAnimationFragment();
-            case R.id.transition_framework_item_id:
+            case R.id.layout_transitions_item_id:
+                return new LayoutTransitionsFragment();
             case R.id.shared_element_item_id:
             case R.id.drawable_animation_item_id:
             default:

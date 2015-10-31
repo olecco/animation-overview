@@ -27,9 +27,9 @@
             android:text="@string/property_animation" />
 
         <TextView
-            android:id="@id/transition_framework_item_id"
+            android:id="@id/layout_transitions_item_id"
             style="@style/MenuText"
-            android:text="@string/transitions_framework" />
+            android:text="@string/layout_transitions" />
 
         <TextView
             android:id="@id/shared_element_item_id"
