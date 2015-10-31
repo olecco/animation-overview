@@ -56,14 +56,20 @@
             android:layout_height="wrap_content">
 
             <CheckBox
-                android:id="@+id/set_transition"
+                android:id="@+id/set_transition_check"
                 android:text="@string/set_transition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <CheckBox
-                android:id="@+id/enable_changing"
+                android:id="@+id/enable_changing_check"
                 android:text="@string/enable_changes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/custom_animations_check"
+                android:text="@string/custom_animations"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
