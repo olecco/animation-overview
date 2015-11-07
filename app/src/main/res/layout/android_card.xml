@@ -23,7 +23,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/kitkat" />
+            android:src="@drawable/kitkat"
+            android:transitionName="icon" />
 
         <TextView
             android:id="@android:id/text1"
@@ -33,7 +34,8 @@
             android:padding="10dp"
             android:text="@string/jelly_bean"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:transitionName="text" />
 
     </LinearLayout>
 

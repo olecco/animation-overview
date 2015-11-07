@@ -13,4 +13,5 @@
     <color name="item6_color">#FFDD8866</color>
 
     <color name="card_text_background">#FFDDDDDD</color>
+    <color name="text_transparent_background">#AADDDDDD</color>
 </resources>
