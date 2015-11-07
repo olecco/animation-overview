@@ -10,6 +10,7 @@ import android.view.Gravity;
 
 import com.olecco.android.animationoverview.screens.LayoutTransitionsFragment;
 import com.olecco.android.animationoverview.screens.PropertyAnimationFragment;
+import com.olecco.android.animationoverview.screens.TransitionsFrameworkFragment;
 import com.olecco.android.animationoverview.screens.ViewAnimationFragment;
 
 public class MainActivity extends Activity implements MainMenuFragment.MainMenuListener {
@@ -67,6 +68,8 @@ public class MainActivity extends Activity implements MainMenuFragment.MainMenuL
                 return new PropertyAnimationFragment();
             case R.id.layout_transitions_item_id:
                 return new LayoutTransitionsFragment();
+            case R.id.transitions_framework_item_id:
+                return new TransitionsFrameworkFragment();
             case R.id.shared_element_item_id:
             case R.id.drawable_animation_item_id:
             default:

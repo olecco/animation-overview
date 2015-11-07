@@ -4,4 +4,11 @@
 
     <color name="animated_color_from">#00000000</color>
     <color name="animated_color_to">#7020C0</color>
+
+    <color name="item1_color">#FFDD9922</color>
+    <color name="item2_color">#FF6600DD</color>
+    <color name="item3_color">#FF55AA22</color>
+    <color name="item4_color">#FFAA0088</color>
+    <color name="item5_color">#FF440077</color>
+    <color name="item6_color">#DD8866</color>
 </resources>

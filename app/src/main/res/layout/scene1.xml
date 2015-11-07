@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="40dp">
+
+    <LinearLayout
+        android:id="@+id/item1_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/item1"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:background="@color/item1_color" />
+
+        <View
+            android:id="@+id/item2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:background="@color/item2_color" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item2_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/item3"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@color/item3_color" />
+
+        <View
+            android:id="@+id/item4"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@color/item4_color" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/item6"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:background="@color/item6_color"
+        android:visibility="gone" />
+
+</LinearLayout>

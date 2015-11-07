@@ -4,43 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/animated_area"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/button_area">
 
-        <ScrollView
+        <LinearLayout
+            android:id="@+id/view_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/view_container"
-                android:orientation="vertical"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
+            <com.olecco.android.animationoverview.views.ColoredView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp" />
 
-                <com.olecco.android.animationoverview.views.ColoredView
+            <com.olecco.android.animationoverview.views.ColoredView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="4dp" />
 
-                    android:layout_marginTop="40dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+        </LinearLayout>
 
-                <com.olecco.android.animationoverview.views.ColoredView
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="40dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </LinearLayout>
-
-        </ScrollView>
-
-
-    </FrameLayout>
-
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/button_area"
@@ -54,32 +44,29 @@
         android:paddingTop="10dp">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <CheckBox
                 android:id="@+id/set_transition_check"
-                android:text="@string/set_transition"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="@string/set_transition" />
 
             <CheckBox
                 android:id="@+id/enable_changing_check"
-                android:text="@string/enable_changes"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="@string/enable_changes" />
 
             <CheckBox
                 android:id="@+id/custom_animations_check"
-                android:text="@string/custom_animations"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
+                android:layout_height="wrap_content"
+                android:text="@string/custom_animations" />
 
         </LinearLayout>
-
-
 
         <LinearLayout
             android:layout_width="match_parent"

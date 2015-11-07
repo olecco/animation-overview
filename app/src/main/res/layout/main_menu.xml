@@ -32,6 +32,11 @@
             android:text="@string/layout_transitions" />
 
         <TextView
+            android:id="@id/transitions_framework_item_id"
+            style="@style/MenuText"
+            android:text="@string/transitions_framework" />
+
+        <TextView
             android:id="@id/shared_element_item_id"
             style="@style/MenuText"
             android:text="@string/shared_elements_transitions" />

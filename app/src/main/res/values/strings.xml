@@ -3,6 +3,7 @@
     <string name="view_animation">View Animation</string>
     <string name="property_animation">Property Animation</string>
     <string name="layout_transitions">Layout Transitions</string>
+    <string name="transitions_framework">Transitions Framework</string>
     <string name="shared_elements_transitions">Shared Elements Transitions</string>
     <string name="drawable_animation">Drawable Animation</string>
 
@@ -25,4 +26,8 @@
     <string name="set_transition">Set LayoutTransition (animateLayoutChanges=true)</string>
     <string name="enable_changes">Enable CHANGING transition</string>
     <string name="custom_animations">Custom animations</string>
+
+    <string name="scene1">Scene 1</string>
+    <string name="scene2">Scene 2</string>
+    <string name="scene3">Scene 3</string>
 </resources>

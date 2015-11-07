@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:transitionOrdering="sequential">
+
+    <transitionSet android:transitionOrdering="together">
+        <slide
+            android:interpolator="@android:interpolator/accelerate_decelerate"
+            android:slideEdge="left">
+            <targets>
+                <target android:targetId="@+id/item3" />
+            </targets>
+        </slide>
+
+        <slide
+            android:interpolator="@android:interpolator/accelerate_decelerate"
+            android:slideEdge="right">
+            <targets>
+                <target android:targetId="@+id/item4" />
+            </targets>
+        </slide>
+
+        <fade android:fadingMode="fade_out">
+            <targets>
+                <target android:targetId="@+id/item6" />
+            </targets>
+        </fade>
+
+    </transitionSet>
+
+    <changeBounds />
+
+    <slide
+        android:interpolator="@android:interpolator/accelerate_decelerate"
+        android:slideEdge="bottom">
+        <targets>
+            <target android:targetId="@+id/item5" />
+        </targets>
+    </slide>
+
+</transitionSet>
