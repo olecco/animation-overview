@@ -37,9 +37,9 @@
             android:text="@string/transitions_framework" />
 
         <TextView
-            android:id="@id/shared_element_item_id"
+            android:id="@id/activity_transitions_item_id"
             style="@style/MenuText"
-            android:text="@string/shared_elements_transitions" />
+            android:text="@string/activity_fragments_transitions" />
 
         <TextView
             android:id="@id/drawable_animation_item_id"

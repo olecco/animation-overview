@@ -4,7 +4,7 @@
     <string name="property_animation">Property Animation</string>
     <string name="layout_transitions">Layout Transitions</string>
     <string name="transitions_framework">Transitions Framework</string>
-    <string name="shared_elements_transitions">Shared Elements Transitions</string>
+    <string name="activity_fragments_transitions">Activity/Fragment Transitions</string>
     <string name="drawable_animation">Drawable Animation</string>
 
     <string name="play">Play</string>
@@ -30,4 +30,9 @@
     <string name="scene1">Scene 1</string>
     <string name="scene2">Scene 2</string>
     <string name="scene3">Scene 3</string>
+    
+    <string name="jelly_bean">Jelly Bean</string>
+    <string name="kitkat">KitKat</string>
+    <string name="lollipop">Lollipop</string>
+    <string name="marshmallow">Marshmallow</string>
 </resources>

@@ -8,6 +8,7 @@ import android.transition.Fade;
 import android.transition.Slide;
 import android.view.Gravity;
 
+import com.olecco.android.animationoverview.screens.ActivityTransitionsFragment;
 import com.olecco.android.animationoverview.screens.LayoutTransitionsFragment;
 import com.olecco.android.animationoverview.screens.PropertyAnimationFragment;
 import com.olecco.android.animationoverview.screens.TransitionsFrameworkFragment;
@@ -70,7 +71,8 @@ public class MainActivity extends Activity implements MainMenuFragment.MainMenuL
                 return new LayoutTransitionsFragment();
             case R.id.transitions_framework_item_id:
                 return new TransitionsFrameworkFragment();
-            case R.id.shared_element_item_id:
+            case R.id.activity_transitions_item_id:
+                return new ActivityTransitionsFragment();
             case R.id.drawable_animation_item_id:
             default:
                 return null;
