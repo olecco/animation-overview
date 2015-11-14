@@ -29,11 +29,11 @@ public class ActivityTransitionsFragment extends BaseAnimationFragment {
             View text = v.findViewById(android.R.id.text1);
 
             Pair<View, String> iconPair = new Pair<>(icon, icon.getTransitionName());
-            Pair<View, String> textPair = new Pair<>(text, text.getTransitionName());
+            //Pair<View, String> textPair = new Pair<>(text, text.getTransitionName());
 
             ActivityOptions activityOptions =
                     ActivityOptions.makeSceneTransitionAnimation(getActivity(),
-                            iconPair, textPair);
+                            iconPair/*, textPair*/);
 
             Intent intent = new Intent(getActivity(), AndroidDetailsActivity.class);
             intent.putExtra(AndroidDetailsActivity.POSITION_EXTRA, (int) v.getTag());
@@ -44,7 +44,7 @@ public class ActivityTransitionsFragment extends BaseAnimationFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_transitions, container, false);
-        ViewGroup grid = (ViewGroup) view.findViewById(R.id.grid);
+        final ViewGroup grid = (ViewGroup) view.findViewById(R.id.grid);
         inflateCards(inflater, grid);
         return view;
     }

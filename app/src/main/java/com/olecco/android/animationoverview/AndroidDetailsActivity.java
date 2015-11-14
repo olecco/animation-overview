@@ -1,13 +1,17 @@
 package com.olecco.android.animationoverview;
 
 import android.app.Activity;
-import android.os.Build;
 import android.os.Bundle;
+import android.transition.ChangeBounds;
+import android.transition.ChangeTransform;
+import android.transition.Fade;
+import android.transition.Slide;
+import android.transition.Transition;
+import android.transition.TransitionSet;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.olecco.android.animationoverview.utils.Utils;
 
 import static com.olecco.android.animationoverview.utils.Utils.ANDROID_ICONS;
 import static com.olecco.android.animationoverview.utils.Utils.ANDROID_INFOS;
@@ -30,6 +34,11 @@ public class AndroidDetailsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.android_details);
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().hide();
+
+        getWindow().setSharedElementEnterTransition(makeSharedElementsTransition());
+        getWindow().setEnterTransition(makeEnterTransition());
+        getWindow().setReturnTransition(makeReturnTransition());
 
         icon = (ImageView) findViewById(android.R.id.icon);
         textName = (TextView) findViewById(android.R.id.text1);
@@ -56,5 +65,46 @@ public class AndroidDetailsActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private Transition makeEnterTransition() {
+        TransitionSet enterTransition = new TransitionSet();
+
+        Slide slide = new Slide(Gravity.BOTTOM);
+        slide.addTarget(android.R.id.text2);
+        enterTransition.addTransition(slide);
+
+        Fade fade = new Fade(Fade.IN);
+        fade.addTarget(R.id.details_header);
+        fade.setDuration(800);
+        enterTransition.addTransition(fade);
+
+        return enterTransition;
+    }
+
+    private Transition makeReturnTransition() {
+        TransitionSet returnTransition = new TransitionSet();
+
+        Slide slide = new Slide(Gravity.BOTTOM);
+        slide.addTarget(android.R.id.text2);
+        returnTransition.addTransition(slide);
+
+        Slide slide2 = new Slide(Gravity.TOP);
+        slide2.addTarget(R.id.details_header);
+        returnTransition.addTransition(slide2);
+
+        return returnTransition;
+    }
+
+    private Transition makeSharedElementsTransition() {
+        TransitionSet set = new TransitionSet();
+
+        Transition changeTransform = new ChangeTransform();
+        set.addTransition(changeTransform);
+
+        Transition changeBounds = new ChangeBounds();
+        set.addTransition(changeBounds);
+
+        return set;
     }
 }

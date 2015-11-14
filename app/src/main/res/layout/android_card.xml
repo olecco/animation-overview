@@ -24,18 +24,25 @@
             android:layout_margin="10dp"
             android:scaleType="fitCenter"
             android:src="@drawable/kitkat"
-            android:transitionName="icon" />
+            android:transitionName="@string/icon_transition_name" />
 
-        <TextView
-            android:id="@android:id/text1"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/card_text_background"
-            android:padding="10dp"
-            android:text="@string/jelly_bean"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:transitionName="text" />
+            android:padding="10dp">
+
+            <TextView
+                android:id="@android:id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/jelly_bean"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/start_text_size"
+                android:transitionName="@string/text_transition_name" />
+
+        </FrameLayout>
 
     </LinearLayout>
 

@@ -5,5 +5,4 @@
     <item name="layout_transitions_item_id" type="id"/>
     <item name="transitions_framework_item_id" type="id"/>
     <item name="activity_transitions_item_id" type="id"/>
-    <item name="drawable_animation_item_id" type="id"/>
 </resources>

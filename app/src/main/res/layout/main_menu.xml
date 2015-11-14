@@ -41,11 +41,6 @@
             style="@style/MenuText"
             android:text="@string/activity_fragments_transitions" />
 
-        <TextView
-            android:id="@id/drawable_animation_item_id"
-            style="@style/MenuText"
-            android:text="@string/drawable_animation" />
-
     </LinearLayout>
 
 </ScrollView>

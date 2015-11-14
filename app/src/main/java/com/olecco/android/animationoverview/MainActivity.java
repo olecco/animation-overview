@@ -73,7 +73,6 @@ public class MainActivity extends Activity implements MainMenuFragment.MainMenuL
                 return new TransitionsFrameworkFragment();
             case R.id.activity_transitions_item_id:
                 return new ActivityTransitionsFragment();
-            case R.id.drawable_animation_item_id:
             default:
                 return null;
         }

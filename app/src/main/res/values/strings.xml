@@ -5,7 +5,6 @@
     <string name="layout_transitions">Layout Transitions</string>
     <string name="transitions_framework">Transitions Framework</string>
     <string name="activity_fragments_transitions">Activity/Fragment Transitions</string>
-    <string name="drawable_animation">Drawable Animation</string>
 
     <string name="play">Play</string>
 
@@ -41,4 +40,7 @@
     <string name="lollipop_info">Android 5.0 "Lollipop" was unveiled under the codename "Android L" on June 25, 2014, during Google I/O. It became available as official over-the-air (OTA) updates on November 12, 2014, for select devices that run distributions of Android serviced by Google, including Nexus and Google Play edition devices. Its source code was made available on November 3, 2014.
         Lollipop features a redesigned user interface built around a responsive design language referred to as "material design". Other changes include improvements to the notifications, which can be accessed from the lockscreen and displayed within applications as top-of-the-screen banners. Furthermore, Google made internal changes to the platform, with the Android Runtime (ART) officially replacing Dalvik for improved application performance, and with changes intended to improve and optimize battery usage, known internally as Project Volta.</string>
     <string name="marshmallow_info">Android 6.0 "Marshmallow" was unveiled under the codename "Android M" during Google I/O on May 28, 2015, for the Nexus 5 and Nexus 6 phones, Nexus 9 tablet, and Nexus Player set-top box, under the build number MPZ44Q. The third developer preview (MPA44G) was released on August 17, 2015 for the Nexus 5, Nexus 6, Nexus 9 and Nexus Player devices, and was updated to MPA44I that brought fixes related to Android for Work profiles.</string>
+
+    <string name="text_transition_name">text</string>
+    <string name="icon_transition_name">icon</string>
 </resources>
