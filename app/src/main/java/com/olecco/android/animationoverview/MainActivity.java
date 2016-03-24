@@ -42,10 +42,10 @@ public class MainActivity extends Activity implements MainMenuFragment.MainMenuL
     private void setupMenuFragmentTransitions() {
         Slide slideInTransition = new Slide();
         Slide slideOutTransition = new Slide();
-        slideInTransition.setSlideEdge(Gravity.START);
+        slideInTransition.setSlideEdge(Gravity.LEFT);
         slideInTransition.setStartDelay(getResources().getInteger(R.integer.transition_duration));
         slideInTransition.setDuration(getResources().getInteger(R.integer.transition_duration));
-        slideOutTransition.setSlideEdge(Gravity.START);
+        slideOutTransition.setSlideEdge(Gravity.LEFT);
         slideOutTransition.setDuration(getResources().getInteger(R.integer.transition_duration));
         mainMenuFragment.setReenterTransition(slideInTransition);
         mainMenuFragment.setExitTransition(slideOutTransition);

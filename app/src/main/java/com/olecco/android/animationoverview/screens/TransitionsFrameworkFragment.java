@@ -2,7 +2,6 @@ package com.olecco.android.animationoverview.screens;
 
 import android.os.Bundle;
 import android.transition.ChangeBounds;
-import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Scene;
 import android.transition.Slide;
@@ -10,7 +9,6 @@ import android.transition.Transition;
 import android.transition.TransitionInflater;
 import android.transition.TransitionManager;
 import android.transition.TransitionSet;
-import android.transition.Visibility;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -70,13 +68,13 @@ public class TransitionsFrameworkFragment extends BaseAnimationFragment {
         TransitionSet buttonsTransition = new TransitionSet();
 
         Slide slideLeft = new Slide();
-        slideLeft.setSlideEdge(Gravity.START);
+        slideLeft.setSlideEdge(Gravity.LEFT);
         slideLeft.addTarget(R.id.item3);
         slideLeft.setInterpolator(new AccelerateDecelerateInterpolator());
         buttonsTransition.addTransition(slideLeft);
 
         Slide slideRight = new Slide();
-        slideRight.setSlideEdge(Gravity.END);
+        slideRight.setSlideEdge(Gravity.RIGHT);
         slideRight.addTarget(R.id.item4);
         slideRight.setInterpolator(new AccelerateDecelerateInterpolator());
         buttonsTransition.addTransition(slideRight);
